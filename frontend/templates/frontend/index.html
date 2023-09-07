@@ -1,0 +1,93 @@
+{% extends 'frontend/template.html' %}
+{% load static %}
+{% block title %}PROF.DR.CODER{% endblock  %}
+
+
+{% block favicon %}
+
+    <!-- Favicon -->
+	<link rel="shortcut icon" href="{{settings.3.image.url}}" type="image/x-icon">
+	<link rel="icon" href="{{settings.3.image.url}}" type="image/x-icon">
+
+{% endblock %}
+
+{% block css %}
+
+    <!-- Icons -->
+	<link rel="stylesheet" type="text/css" href="{% static 'frontend/css/pe-icon-7-stroke.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'frontend/css/pe-helper.css' %}">
+	<link rel="stylesheet" href="{% static 'frontend/css/bootstrap-icons.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'frontend/css/all.min.css' %}">
+
+
+	<!-- CSS -->
+    <link href="{% static 'frontend/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'frontend/css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/leaflet.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/aos.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'frontend/css/style.css' %}">
+
+{% endblock  %}
+
+
+
+{% block loader %}
+
+    <!-- PRE LOADER -->
+	<div class="preloader js-preloader flex-center"> 
+		<div class="dots">
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+		</div>
+	</div>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+    {% include 'frontend/partials/_header.html' %}
+
+    {% include 'frontend/home.html' %}
+
+    {% include 'frontend/intro_section.html' %}
+
+    {% include 'frontend/about.html' %}
+
+    {% include 'frontend/skill.html' %}
+
+    {% include 'frontend/portfolio.html' %}
+
+    {% include 'frontend/service.html' %}
+
+
+    {% include 'frontend/blog.html' %}
+    
+    {% include 'frontend/contact.html' %}
+
+    {% include 'frontend/partials/_footer.html' %}
+    
+
+{% endblock %}
+
+
+{% block js %}
+
+<script src="{% static 'frontend/js/jquery.js' %}"></script>
+<script src="{% static 'frontend/js/popper.min.js' %}"></script>
+<script src="{% static 'frontend/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'frontend/js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'frontend/js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'frontend/js/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'frontend/js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'frontend/js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'frontend/js/aos.js' %}"></script>
+<script src="{% static 'frontend/js/leaflet.js' %}"></script>
+<script src="{% static 'frontend/js/jquery.preloadinator.min.js' %}"></script>
+<script src="{% static 'frontend/js/vanilla-tilt.min.js' %}"></script>
+<script src="{% static 'frontend/js/mgGlitch.min.js' %}"></script>
+<script src="{% static 'frontend/js/script.js' %}"></script>
+
+{% endblock %}

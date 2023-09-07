@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	{% block favicon %}{% endblock %}
+
+	{% block css %}{% endblock  %}
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;family=Poppins:wght@700;900&amp;display=swap" rel="stylesheet">
+
+	
+
+    <title>{{settings.3.value}}</title>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#site-navbar" class="home-hacker dark-mode">
+
+	{% block loader %}{% endblock %}
+
+	
+
+	{% block content %}{% endblock %}
+
+	
+
+
+	{% block js %}{% endblock %}
+</body>
+</html>

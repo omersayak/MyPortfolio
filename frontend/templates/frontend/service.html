@@ -1,0 +1,24 @@
+<!-- SERVICE SECTION -->
+<section class="service-section section-block" id="service-section">
+    <div class="container">
+        <div class="section-title dark">
+            <h2>{{serviceTitle_contents.title}}</h2>
+            <p class="lead">
+                {{serviceTitle_contents.description}}
+            </p>
+        </div><!-- .section-title -->
+        <div class="row">
+           {% for serv in service_contents %}
+                <div class="col-xl-4 col-lg-6" data-aos="fade-up">
+                    <div class="content-wrapper service-tilt" data-tilt data-tilt-max="15">
+                        <div class="icon-box"><i class="{{serv.serviceIcon}}"></i></div>
+                        <h3>{{serv.title}}</h3>
+                        <p>
+                            {{serv.description}}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div><!-- .row -->
+    </div> <!-- .container -->
+</section> <!-- .service-section -->

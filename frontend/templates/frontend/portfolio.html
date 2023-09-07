@@ -1,0 +1,67 @@
+<!-- PORTFOLIO SECTION -->
+<section class="portfolio-section section-block" id="portfolio-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{portfolioTitle_contents.title}}</h2>
+            <p class="lead">
+                {{portfolioTitle_contents.description}}
+            </p>
+        </div><!-- .section-title -->
+        <div class="row grid" data-aos="fade-up" data-aos-duration="2000">
+            {% for portfolios in portfolio_content %}
+            <div class="col-lg-4 col-md-6 grid-item programming">
+                <div class="box">
+                    <img src="{{portfolios.image.url}}" alt="portfolio image">
+                    <div class="box-content">
+                            <span class="category">{{portfolios.title}}</span>
+                        <h3 class="title">{{portfolios.value}}</h3>
+                    </div>
+                    <div class="icon-box"><a href="#" data-bs-toggle="modal" data-bs-target="#{{portfolios.portfolioModal}}"><i class="bi bi-plus-lg"></i></a></div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="{{portfolios.portfolioModal}}" tabindex="-1" aria-labelledby="{{portfolios.portfolioModal}}" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                          
+                          <div class="modal-body">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x"></i></button>
+                            <div class="row item-content">
+                                <div class="col-xl-12">
+                                    <img src="{{portfolios.image.url}}" alt="portfolio image">
+                                </div>
+                                <div class="col-xl-8">
+                                    <div class="content-wrapper">
+                                        <h2 class="item-title">{{portfolios.titleValue}}</h2>
+                                        <p>
+                                            {{portfolios.description}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div class="meta-wrapper">
+                                        <ul class="item-meta">
+                                            <li>Project Type: <span class="meta-value">{{portfolios.projectType}}</span></li>
+                                            <li>Producer: <span class="meta-value">{{portfolios.producer}}</span></li>
+                                            <li>Language: <span class="meta-value">{{portfolios.language}}</span></li>
+                                            <li>
+                                                Project Link:
+                                                <a href="{{ portfolios.projectLink }}" style="font-weight: bold; color: black; text-decoration: underline;">
+                                                    {{ portfolios.value }}
+                                                </a>
+                                            </li>                                                                                    </ul>
+                                    </div> <!-- .meta-wrapper -->
+                                </div>
+                            </div> <!-- .row -->
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% comment %}  {% endcomment %}
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+    
+</section> <!-- .portfolio-section -->

@@ -1,0 +1,21 @@
+<!-- SITE HEADER -->
+<header class="site-header" id="site-header">
+    <nav class="navbar navbar-expand-xl" id="site-navbar">
+      <div class="container">
+        <a class="navbar-brand">Prof.Dr.Coder</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-lg-0">
+            {% for menu in menus %}
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#{{menu.slug}}">{{menu.name}}</a>
+            </li>
+            {% endfor %}
+          </ul> <!-- .navbar-nav -->
+        </div> <!-- .collapse -->
+      </div> <!-- .container -->
+    </nav> <!-- .navbar -->
+
+</header> <!-- .site-header -->

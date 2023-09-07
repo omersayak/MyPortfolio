@@ -1,0 +1,36 @@
+<!-- INTRO SECTION -->
+<section class="intro-section section-block">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{intros_section.title}}</h2>
+            <p class="lead">
+                {{intros_section.description}}
+            </p>
+        </div><!-- .section-title -->
+
+        <div class="row">
+            {% for introContent in intro_sections %}
+                <div class="col-xl-4 col-lg-6" data-aos="fade-up">
+                    <div class="item-wrapper">
+                        <div class="icon-box"><i class="{{introContent.introIcon}}"></i></div>
+                        <div class="content-wrapper">
+                            <h3>{{introContent.title}}</h3>
+                            <p>
+                                {{introContent.description}}
+                            </p>
+                        </div> <!-- .content-wrapper -->
+                    </div> <!-- .item-wrapper -->
+                </div>
+            {% endfor %}
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+
+</section> <!-- .intro-section -->
+
+
+
+
+
+
+
+

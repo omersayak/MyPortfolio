@@ -1,0 +1,74 @@
+<!-- BLOG SECTION -->
+<section class="blog-section section-block" id="blog-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{blogTitle_contents.title}}</h2>
+            <p class="lead">
+                {{blogTitle_contents.description}}
+            </p>
+        </div><!-- .section-title -->
+        <div class="row">
+            <div class="col-lg-6 large-post" data-aos="fade-right" data-aos-duration="1200">
+                <div class="content-wrapper">
+                    <div class="image-wrapper">
+                        <img class="img-fluid" src="{{blogTitle_contents.image.url}}" alt="post thumnail">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-6 post-group">
+                <div class="row">
+                    {% for blog in blog_contents %}
+                    <div class="col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                        <!-- Modal -->
+                        <div class="modal fade" id="{{blog.blogId}}" tabindex="-1" aria-labelledby="{{blog.blogId}}" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+                            <div class="modal-content">
+                              
+                              <div class="modal-body">
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x"></i></button>
+                                <div class="row blog-content">
+                                    <div class="col-xl-12">
+                                        <img class="img-fluid" src="{{blog.image.url}}" alt="blog post image 02">
+                                    </div>
+                                    <div class="col-xl-8 offset-xl-2">
+                                        <div class="content-wrapper">
+                                            <h2 class="blog-title">{{blog.blogTitle}}</h2>
+                                            <ul class="blog-meta d-md-flex align-items-center justify-content-md-center">
+                                                <li><a><i class="bi bi-folder-fill"></i> {{blog.name}}</a></li>
+                                                <li><i class="bi bi-calendar3"></i> {{blog.date}}</li>
+                                            </ul>
+                                            <p>
+                                                {{blog.description}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                </div> <!-- .row -->
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="content-wrapper">
+                            <div class="post-content">
+                                <ul class="post-meta">
+                                    
+                                    <li class="post-cat">
+                                        <a href="#"><i class="pe-7s-folder"></i> {{blog.name}}</a>
+                                    </li>
+                                </ul>
+                                <h3><a href="#" data-bs-toggle="modal" data-bs-target="#{{blog.blogId}}">{{blog.title}}</a></h3>
+                            </div>
+                            <div class="image-wrapper">
+                                <img class="img-fluid" src="{{blog.image.url}}" alt="post thumnail">
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+</section> <!-- .blog-section -->
